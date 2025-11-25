@@ -33,3 +33,4 @@ docker-compose up -d
 
 ## Authors 
 - [Jade Planterose](https://github.com/JadePlanECE)
+- [Eden Masmoudi](https://github.com/)
