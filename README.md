@@ -4,6 +4,7 @@ Final Project : Technical Project (option A)
 
 Big Data tool : Kafka 
 
+The aim of this project is to reproduce real-time data flows in a video game. A producer will create an action, which will be processed by the broker(s), then the consumer will display the action. 
 
 ## Installation 
 1. Clone project 
@@ -48,3 +49,4 @@ python consumer.py
 
 ## Authors 
 - [Jade Planterose](https://github.com/JadePlanECE)
+- [Eden Masmoudi](https://github.com/edenmsd)
