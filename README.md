@@ -29,6 +29,21 @@ pip install -r requirements.txt
 4. Run Kafka tool
 ```bash
 docker-compose up -d
+docker ps # check if container started 
+```
+
+5. Run producer 
+```bash
+cd producer
+pip install -r requirements.txt
+python producer.py
+```
+
+6. Run consumer
+```bash
+cd consumer
+pip install -r requirements.txt
+python consumer.py
 ```
 
 ## Authors 
