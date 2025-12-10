@@ -6,6 +6,30 @@ Big Data tool : Kafka
 
 The aim of this project is to reproduce real-time data flows in a video game. A producer will create an action, which will be processed by the broker(s), then the consumer will display the action. 
 
+## Structure 
+```
+kafka_project/
+│
+├── consumer/
+│   ├── consumer.py
+│   └── requirements.txt
+│
+├── data/
+│   └── actions.json
+│
+├── producer/
+│   ├── producer.py
+│   └── requirements.txt
+│
+├── screenshots/
+│   ├── kafka-running.png
+│   ├── producer-output.png
+│   └── consumer-output.png
+│
+├── docker-compose.yaml
+└── README.md
+```
+
 ## Installation 
 1. Clone project 
 ```bash
@@ -23,24 +47,25 @@ source kafka_env/bin/activate
 ```
 
 3. Install dependencies 
-```
+```bash
 pip install -r requirements.txt
 ```
 
-4. Run Kafka tool
+## Running 
+1. Run Kafka tool
 ```bash
 docker-compose up -d
 docker ps # check if container started 
 ```
 
-5. Run producer 
+2. Run producer 
 ```bash
 cd producer
 pip install -r requirements.txt
 python producer.py
 ```
 
-6. Run consumer
+3. Run consumer
 ```bash
 cd consumer
 pip install -r requirements.txt
