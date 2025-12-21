@@ -41,9 +41,6 @@ kafka_project/
 │   ├── consumer.py
 │   └── requirements.txt
 │
-├── data/
-│   └── actions.json
-│
 ├── producer/
 │   ├── producer.py
 │   └── requirements.txt
