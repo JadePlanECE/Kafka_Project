@@ -85,19 +85,21 @@ docker-compose up -d
 docker ps # check if container started 
 ```
 
-2. Run producer 
+2. Run producer (Terminal 1)
 ```bash
 cd producer
 pip install -r requirements.txt
 python producer.py
 ```
 
-3. Run consumer
+3. Run consumer (Terminal 2)
 ```bash
 cd consumer
 pip install -r requirements.txt
 python consumer.py
 ```
+
+> **Note**: Run the producer and consumer in two separate terminals to see real-time message streaming.
 
 ## Screenshots
 
