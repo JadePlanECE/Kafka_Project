@@ -110,6 +110,25 @@ python consumer.py
 ### Consumer output
 ![Consumer output](screenshots/consumer-output.png)
 
+## Challenges & Solutions
+
+When setting up Kafka with Docker, we ran into a few issues.
+
+### 1. Kafka container stopping immediately
+The Kafka container kept crashing right after starting. Turns out, we were using the Apache Kafka image but with Bitnami-specific environment variables in our docker-compose.yaml — they just weren't compatible.
+
+### 2. Docker image tags not found
+We tried using Bitnami Kafka with tags like `latest` or `3.7`, but Docker couldn't find them on Docker Hub. Frustrating when you just want to get things running quickly.
+
+### 3. Obsolete `version:` line warning
+Our docker-compose.yaml had a `version:` line at the top which is now deprecated and caused warnings.
+
+### How we fixed it
+- Switched to the **Confluent Kafka image** with a stable tag (`7.6.0`)
+- Removed the obsolete `version:` line from docker-compose.yaml
+- Used a configuration compatible with both Kafka and Zookeeper
+
+After these fixes, both the Zookeeper and Kafka containers started correctly.
 
 ## Authors 
 - [Jade Planterose](https://github.com/JadePlanECE)
