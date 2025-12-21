@@ -1,8 +1,12 @@
+import json
 import random
 import time
 from kafka import KafkaProducer
 
-producer = KafkaProducer(bootstrap_servers=['localhost:9092'], api_version=(0, 11, 5))
+producer = KafkaProducer(
+    bootstrap_servers=['localhost:9092'],
+    value_serializer=lambda v: json.dumps(v).encode('utf-8')
+)
 
 actions = ["move", "attack", "collect_item", "use_item"]
 directions = ["north", "south", "est", "ouest"]
